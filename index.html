@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotomania</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="h-screen">
+    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+        <div class="container flex flex-wrap justify-between items-center mx-auto">
+            <a href="#" class="flex items-center">
+                <img src="https://www.lotocerta.com.br/wp-content/uploads/2020/01/logo-lotomania-em-png.png"
+                    class="mr-3 h-6 sm:h-9" alt="Lotomania Logo" />
+                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">¡Lotomania</span>
+            </a>
+            <span class="self-center text-base  whitespace-nowrap dark:text-white">La mejor Opcion para Tus
+                ventas</span>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="#"
+                            class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-orange-600 md:p-0 dark:text-white"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-600 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-600 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-600 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-600 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-white border-gray-200 px-2 sm:px-32 py-2.5 dark:bg-gray-900">
+        <div id="carouselExampleCaptions" class="carousel slide relative" data-bs-ride="carousel">
+            <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner relative w-full overflow-hidden">
+                <div class="carousel-item active relative float-left w-full">
+                    <img src="https://k7f6k2y7.stackpathcdn.com/latinoamerica/wp-content/uploads/sites/2/2021/09/Lotomania.jpg"
+                        class="block w-full h-96 object-cover rounded-xl brightness-75" alt="..." />
+                    <div class="carousel-caption hidden md:block absolute text-center">
+                        <h5 class="text-xl">First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item relative float-left w-full">
+                    <img src="https://portalaltadefinicao.com/wp-content/uploads/2022/04/Lotomania.jpg"
+                        class="block w-full h-96 object-cover rounded-xl brightness-75" alt="..." />
+                    <div class="carousel-caption hidden md:block absolute text-center">
+                        <h5 class="text-xl">Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item relative float-left w-full">
+                    <img src="https://static5.vvale.com.br/wp-content/uploads/2014/11/lotomania-reproducao.jpg"
+                        class="block w-full h-96 object-cover rounded-xl brightness-75" alt="..." />
+                    <div class="carousel-caption hidden md:block absolute text-center">
+                        <h5 class="text-xl">Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+                class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <section class="bg-white border-gray-200 px-2 sm:px-32 py-2.5 dark:bg-gray-900">
+        <div class="flex sm:flex-row flex-col gap-2">
+            <div data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                class=" rounded overflow-hidden border w-full lg:w-6/12 md:w-6/12 bg-white ">
+                <img class="w-full bg-cover h-72"
+                    src="https://pbs.twimg.com/profile_banners/723482561947787264/1493906254/600x200">
+                <div class="px-3 pb-2">
+                    <div class="pt-2">
+                        <i class="far fa-heart cursor-pointer"></i>
+                        <span class="text-sm text-gray-400 font-medium">@LaGranRuleta</span>
+                    </div>
+                    <div class="pt-1">
+                        <div class="mb-2 text-sm">
+                            LOTERIA DE ANIMALITOS PAGA 1X32 VECES
+                        </div>
+                    </div>
+
+                    <div class="mb-2">
+                        <div class="mb-2 text-sm">
+                            <a href="https://lagranruleta.es.tl/" target="_blank" class="underline ...">
+                                lagranruleta.es.tl
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                class=" rounded overflow-hidden border w-full lg:w-6/12 md:w-6/12 bg-white">
+                <img class="w-full bg-cover h-72"
+                    src="https://pbs.twimg.com/profile_banners/1546154691427450880/1657467608/600x200">
+                <div class="px-3 pb-2">
+                    <div class="pt-2">
+                        <i class="far fa-heart cursor-pointer"></i>
+                        <span class="text-sm text-gray-400 font-medium">@lagranjitaofic</span>
+                    </div>
+                    <div class="pt-1">
+                        <div class="mb-2 text-sm">
+                            ¡El verdadero hogar de los animalitos a nivel nacional!
+                            La que paga más y paga de verdad.
+                            <ul class="ml-4 list-disc">
+                                <li>¡11 sorteos diarios!</li>
+                                <li>De Lunes a Domingo</li>
+                                <li>9:00 am – 7:00 pm</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <div class="mb-2 text-sm">
+                            <a href="https://lagranruleta.es.tl/" target="_blank" class="underline ...">
+                                lagranjitaonline.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                class=" rounded overflow-hidden border w-full lg:w-6/12 md:w-6/12 bg-white">
+                <img class="w-full bg-cover h-72"
+                    src="https://pbs.twimg.com/profile_banners/801629341159456768/1647372110/1500x500">
+                <div class="px-3 pb-2">
+                    <div class="pt-2">
+                        <i class="far fa-heart cursor-pointer"></i>
+                        <span class="text-sm text-gray-400 font-medium">@lottoactivo</span>
+                    </div>
+                    <div class="pt-1">
+                        <div class="mb-2 text-sm">
+                            El Patronus Lotto Activo, el primer sorteo oficial de Animalitos de Latino América.
+
+                            No se pierda de nada:
+                            #Animalitos #Triples y #Terminales
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <div class="mb-2 text-sm">
+                            <a href="https://lagranruleta.es.tl/" target="_blank" class="underline ...">
+                                lottoactivo.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section data-aos="fade-up" class="bg-white border-gray-200 px-2 sm:px-32 sm:py-32 py-2.5 dark:bg-gray-900">
+        <div class=" flex justify-center ">
+            <div class="flex justify-center items-center gap-2  divide-x">
+                <div>
+                    <label class="uppercase " for="">
+                        ¡Estas a un click de cambiar tu suerte!
+                    </label>
+
+                </div>
+
+                <div>
+                    <img src="https://lotteryguru.com/pict/96886/br-lotomania-2x-png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section data-aos="fade-up" class="bg-white border-gray-200 px-2 sm:px-32 sm:py-32 py-2.5 dark:bg-gray-900">
+        <div class=" flex justify-center ">
+            <div class="flex justify-center items-center gap-2  divide-x">
+                <div>
+                    <label class="uppercase " for="">
+                        ¡Vende Desde Cualquier Lugar con tu PC,Tablet o Telefono!
+                    </label>
+
+                </div>
+                <div >
+                    <img src="https://images.pexels.com/photos/826349/pexels-photo-826349.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+</body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</html>
