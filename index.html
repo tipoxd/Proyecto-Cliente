@@ -39,7 +39,7 @@
 
 <script>
     $(window).scroll(function () {
-        $('#navbar').toggleClass('transition-all delay-100 bg-slate-800 ', $(this).scrollTop() > 50);
+        $('#navbar').toggleClass('transition-all delay-150 bg-slate-800 ', $(this).scrollTop() > 50);
         //$('#options >li>a ').toggleClass('text-black', $(this).scrollTop() < 50);
         $('#options > ul ').toggleClass('bg-slate-800/75', $(this).scrollTop() < 50);
         // $('#svg_nav ').toggleClass('fill-white', $(this).scrollTop() < 50);
@@ -133,14 +133,14 @@
             </div>
             <div class="carousel-inner relative w-full overflow-hidden">
                 <div class="carousel-item active relative float-left w-full">
-                    <img src="./img/Lotomania_banner.png" class="block w-full  object-cover  " alt="..." />
+                    <img src="./img/Lotomania_banner.png" class="block w-full  sm:h-auto h-96  object-cover  " alt="..." />
                     <div class="carousel-caption hidden  absolute text-center">
                         <h5 class="text-xl">First slide label</h5>
                         <p>Some representative placeholder content for the first slide.</p>
                     </div>
                 </div>
                 <div class="carousel-item relative float-left w-full">
-                    <img src="./img/Lotomania_banner2.png" class="block w-full  object-cover  " alt="..." />
+                    <img src="./img/Lotomania_banner2.png" class="block w-full sm:h-auto h-96  object-cover  " alt="..." />
                     <div class="carousel-caption hidden  absolute text-center">
                         <h5 class="text-xl">Second slide label</h5>
                         <p>Some representative placeholder content for the second slide.</p>
