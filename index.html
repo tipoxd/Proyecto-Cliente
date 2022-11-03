@@ -23,6 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
     <script>
         tailwind.config = {
             theme: {
@@ -47,7 +48,23 @@
         $('#btn_mobile > svg ').toggleClass('fill-white', $(this).scrollTop() < 50);
 
     });
+    $(window).on('load', function () {
+        console.log('listo');
+        $(".loader-animarion").fadeOut("slow");
+    });
+
+
 </script>
+
+
+<div id="loader" class="loader-animarion" style="display: flex;">
+    <div>
+    </div>
+    <div>
+    </div>
+    <div>
+    </div>
+</div>
 
 <body class="h-screen    bg-gray-100">
     <nav id="navbar" class=" px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 dark:border-gray-600">

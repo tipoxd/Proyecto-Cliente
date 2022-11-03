@@ -1,0 +1,45 @@
+.loader-animarion {
+    display: flex ;
+    justify-content: center ;
+    align-self: center ;
+    margin: 0 auto ;
+    background: white ;
+    width: 100vw ;
+    height: 100vh ;
+    z-index: 100 ;
+    position: fixed ;
+}
+
+.loader-animarion>div {
+    width: 1.6rem !important;
+    height: 1.6rem !important;
+    margin: 400px 0.5rem !important;
+    background: #29a7df !important;
+    border-radius: 50% !important;
+    -webkit-animation: loader-animarion 0.6s infinite alternate;
+    animation: loader-animarion 0.6s infinite alternate;
+}
+
+@-webkit-keyframes loader-animarion {
+    to {
+        opacity: 0.1;
+        transform: translate3d(0, -1rem, 0);
+    }
+}
+
+@keyframes loader-animarion {
+    to {
+        opacity: 0.1;
+        transform: translate3d(0, -1rem, 0);
+    }
+}
+
+.loader-animarion>div:nth-child(2) {
+    -webkit-animation-delay: 0.2s !important;
+    animation-delay: 0.2s !important;
+}
+
+.loader-animarion>div:nth-child(3) {
+    -webkit-animation-delay: 0.3s !important;
+    animation-delay: 0.3s !important;
+}
