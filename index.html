@@ -123,40 +123,43 @@
 
 
     <section class=" bg-white border-gray-200 dark:bg-gray-900">
-        <div id="carouselExampleCaptions" class="carousel slide relative" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide relative" data-bs-ride="carousel">
             <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
                     aria-label="Slide 2"></button>
 
             </div>
             <div class="carousel-inner relative w-full overflow-hidden">
-                <div class="carousel-item active relative float-left w-full">
-                    <img src="./img/Lotomania_banner.png" class="block w-full  sm:h-auto h-96  object-cover  " alt="..." />
-                    <div class="carousel-caption hidden  absolute text-center">
-                        <h5 class="text-xl">First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
-                    </div>
+                <div class="carousel-item active float-left w-full">
+
+                    <picture>
+
+                        <source media="(min-width: 100px) and (max-width: 600px)" srcset="./img/Banner_mobile2.png" />
+                        <img src="./img/Lotomania_banner.png" class="block w-full sm:h-auto h-96  object-cover  " />
+                    </picture>
+
                 </div>
-                <div class="carousel-item relative float-left w-full">
-                    <img src="./img/Lotomania_banner2.png" class="block w-full sm:h-auto h-96  object-cover  " alt="..." />
-                    <div class="carousel-caption hidden  absolute text-center">
-                        <h5 class="text-xl">Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
-                    </div>
+
+                <div class="carousel-item float-left w-full">
+                    <picture>
+
+                        <source media="(min-width: 100px) and (max-width: 600px)" srcset="./img/Banner_mobile.png" />
+                        <img src="./img/Lotomania_banner2.png" class="block w-full sm:h-auto h-96  object-cover  " />
+                    </picture>
                 </div>
 
             </div>
             <button
                 class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-                type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
             <button
                 class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-                type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                 <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -182,7 +185,7 @@
                         <a _href="link" class="cursor-pointer">
                             <figure>
                                 <!-- Image -->
-                                <img :src="post.image + '?auto=format&amp;fit=crop&amp;w=400&amp;q=50'"
+                                <img :src="post.image + '?auto=format&amp;fit=crop&amp;w=400&amp;q=50'" loading="lazy"
                                     class="rounded-t h-72 w-full object-cover">
 
                                 <figcaption class="p-4">
@@ -207,8 +210,8 @@
                     <a _href="link" class="cursor-pointer">
                         <figure>
                             <!-- Image -->
-                            <img :src="post.image + '?auto=format&amp;fit=crop&amp;w=400&amp;q=50'"
-                                class="rounded-t h-72 w-full object-cover" src="./img/lagranruleta.png">
+                            <img loading="lazy" :src="post.image + '?auto=format&amp;fit=crop&amp;w=400&amp;q=50'"
+                                loading="lazy" class="rounded-t h-72 w-full object-cover" src="./img/lagranruleta.png">
 
                             <div class="px-3 pb-2">
                                 <div class="pt-2 flex">
@@ -245,7 +248,7 @@
                     <a _href="link" class="cursor-pointer">
                         <figure>
                             <!-- Image -->
-                            <img :src="post.image + '?auto=format&amp;fit=crop&amp;w=400&amp;q=50'"
+                            <img :src="post.image + '?auto=format&amp;fit=crop&amp;w=400&amp;q=50'" loading="lazy"
                                 class="rounded-t h-72 w-full object-cover" src="./img/lagranjita.png">
 
                             <div class="px-3 pb-2">
@@ -289,7 +292,7 @@
                     <a _href="link" class="cursor-pointer">
                         <figure>
                             <!-- Image -->
-                            <img :src="post.image + '?auto=format&amp;fit=crop&amp;w=400&amp;q=50'"
+                            <img :src="post.image + '?auto=format&amp;fit=crop&amp;w=400&amp;q=50'" loading="lazy"
                                 class="rounded-t h-72 w-full object-cover" src="./img/lottoactivo.png">
 
                             <div class="px-3 pb-2">
@@ -331,19 +334,21 @@
     <section data-aos="fade-up" class=" bg-white border-gray-200 dark:bg-gray-900">
         <div class=" ">
             <div class="overflow-hidden rounded-lg">
-                <img class="w-full" src="./img/Lotomania_banner3.png" alt="">
+                <img loading="lazy" class="w-full" src="./img/Lotomania_banner3.png" alt="">
             </div>
         </div>
     </section>
 
-    <section data-aos="fade-up" class="px-2 font-bold sm:px-32 py-32 border-gray-200 dark:bg-gray-900 text-center aos-init aos-animate">
-        <span style="font-family: 'Roboto', sans-serif;" class=" lg:text-3xl sm:text-2xl text-xl self-center     whitespace-nowrap dark:text-white">Navegadores Compatibles</span>
+    <section data-aos="fade-up"
+        class="px-2 font-bold sm:px-32 py-32 border-gray-200 dark:bg-gray-900 text-center aos-init aos-animate">
+        <span style="font-family: 'Roboto', sans-serif;"
+            class=" lg:text-3xl sm:text-2xl text-xl self-center     whitespace-nowrap dark:text-white">Navegadores
+            Compatibles</span>
         <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div data-aos="flip-left" class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
                 <div class="mb-8">
-                    <img class="object-center object-cover rounded-full h-36 w-36"
-                        src="./img/chrome-logo.png"
-                        alt="photo">
+                    <img class="object-center object-cover rounded-full h-36 w-36" loading="lazy"
+                        src="./img/chrome-logo.png" alt="photo">
                 </div>
                 <div class="text-center">
                     <p class="text-xl text-gray-700 font-bold mb-2">Chrome</p>
@@ -352,9 +357,8 @@
             </div>
             <div data-aos="flip-left" class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
                 <div class="mb-8">
-                    <img class="object-center object-cover rounded-full h-36 w-36"
-                        src="./img/Firefox_logo.png"
-                        alt="photo">
+                    <img class="object-center object-cover rounded-full h-36 w-36" loading="lazy"
+                        src="./img/Firefox_logo.png" alt="photo">
                 </div>
                 <div class="text-center">
                     <p class="text-xl text-gray-700 font-bold mb-2">Firefox</p>
@@ -363,23 +367,22 @@
             </div>
             <div data-aos="flip-left" class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
                 <div class="mb-8">
-                    <img class="object-center object-cover rounded-full h-36 w-36"
-                        src="./img/Opera_logo.png"
-                        alt="photo">
+                    <img class="object-center object-cover rounded-full h-36 w-36" loading="lazy"
+                        src="./img/Opera_logo.png" alt="photo">
                 </div>
                 <div class="text-center">
                     <p class="text-xl text-gray-700 font-bold mb-2">Opera</p>
                     <p class="text-base text-gray-400 font-normal">Versiones Superiores 67+</p>
                 </div>
             </div>
-           
+
         </div>
     </section>
 
     <section data-aos="fade-up" class=" bg-white border-gray-200 dark:bg-gray-900">
         <div class="">
             <div class="overflow-hidden rounded-lg">
-                <img class="w-full" src="./img/Lotomania_banner4.png" alt="">
+                <img loading="lazy" class="w-full" src="./img/Lotomania_banner4.png" alt="">
             </div>
         </div>
 
