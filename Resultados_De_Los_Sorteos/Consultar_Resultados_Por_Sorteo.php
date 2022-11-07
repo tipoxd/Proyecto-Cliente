@@ -26,12 +26,20 @@ function consultar()
 
     SELECT
 	*,
-	premios.ganador,
-	premios.descripcion,
-	premios.fecha 
+	premios.ganador, 
+	premios.descripcion, 
+	premios.fecha, 
+	id_sorteos.imgSrc
 FROM
 	sorteos
-	INNER JOIN premios ON sorteos.cod_sorteo = premios.cod_sorteo 
+	INNER JOIN
+	premios
+	ON 
+		sorteos.cod_sorteo = premios.cod_sorteo
+	INNER JOIN
+	id_sorteos
+	ON 
+		sorteos.id_sorteo = id_sorteos.id_sorteo
 WHERE
 	sorteos.id_sorteo = ' . $id_sorteo . '
      AND
