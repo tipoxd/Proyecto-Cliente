@@ -101,11 +101,13 @@
                     Sorteos
                     <input type="date" class="rounded-lg border-gray-300 dark:border-white text-center dark:bg-transparent" value="2022-04-20" id="fecha" >
                 </span>
-                <div id="sorteos" class="flex flex-row gap-2 w-full">
+                <div id="sorteos" class="flex flex-row gap-2 w-full overflow-y-auto">
                     <?php
                     include('../php/conexion.php');
                     $consulta = '
                     SELECT *  FROM id_sorteos
+                    order by 
+                    orden ASC
                     ';
                     $resultados = mysqli_query($conexion, $consulta);
                     while ($row = mysqli_fetch_assoc($resultados)) {
@@ -156,7 +158,7 @@
                         </div>
                         <div class="text-center mt-2">
                             <h3 class="text-2xl text-slate-700 font-bold dark:text-slate-400 leading-normal mb-1">${data[i].ganador} ${data[i].descripcion}</h3>
-                            <div class="text-xs mt-0 mb-2 text-slate-400 dark:text-slate-500 font-bold uppercase">
+                            <div class="text-base mt-0 mb-2 text-slate-400 dark:text-slate-500 font-bold uppercase">
                                 ${data[i].sorteo}
                             </div>
                         </div>
