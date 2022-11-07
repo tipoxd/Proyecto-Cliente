@@ -139,12 +139,15 @@
                     $('#resultados').html('');
                     $('#resultados').addClass('grid');
                     for (let i = 0; i < data.length; i++) {
+                        //el nombre de las imagenes vienen con un espacio emtonces con el split se quita y se resuelve el problema  
+                        let ganador = data[i].ganador;
+                        ganador = ganador.split(' ');
                         $('#resultados').append(`<div class="relative max-w-md mx-auto md:max-w-2xl mt-6 min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl mt-16">
                     <div class="px-6">
                         <div class="flex flex-wrap justify-center">
                             <div class="w-full flex justify-center">
                                 <div class="relative">
-                                    <img src="${}" class="shadow-xl rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]">
+                                    <img src="../img/${data[i].imgSrc}/${ganador[0]}.png" class="shadow-xl rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]">
                                 </div>
                             </div>
                             <div class="w-full text-center mt-20">
@@ -166,7 +169,7 @@
 
                 }
             </script>
-            <div id="resultados" class="grid grid-flow-row gap-8 text-neutral-600 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+            <div id="resultados" class="grid grid-flow-row gap-8 text-neutral-600 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 ">
 
 
 
