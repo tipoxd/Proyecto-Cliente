@@ -99,9 +99,9 @@
             <section class="border-b border-gray-200  mt-5 border-gray-200  font-bold   rounded-md py-5">
                 <span style="font-family: 'Roboto', sans-serif;" class=" lg:text-3xl sm:text-2xl text-xl self-center    whitespace-nowrap dark:text-white">La
                     Sorteos
-                    <input type="date" class="rounded-lg border-gray-300" value="2022-04-20" id="fecha">
+                    <input type="date" class="rounded-lg border-gray-300 dark:border-white text-center dark:bg-transparent" value="2022-04-20" id="fecha" >
                 </span>
-                <div class="flex flex-row gap-2 w-full">
+                <div id="sorteos" class="flex flex-row gap-2 w-full">
                     <?php
                     include('../php/conexion.php');
                     $consulta = '
@@ -109,7 +109,7 @@
                     ';
                     $resultados = mysqli_query($conexion, $consulta);
                     while ($row = mysqli_fetch_assoc($resultados)) {
-                        echo '<button onclick="show_result(`' . $row['id_sorteo'] . '`)" class="md:w-32 bg-indigo-600 hover:bg-blue-dark text-white font-bold py-1 px-6 rounded-lg mt-3 hover:bg-indigo-500 transition ease-in-out duration-300">
+                        echo '<button onclick="show_result(`' . $row['id_sorteo'] . '`)" class="md:w-32 text-black dark:hover:border-white border border-slate-800 dark:text-slate-500 hover:bg-blue-dark text-white font-bold py-1 px-6 rounded-lg mt-3 hover:bg-slate-800 hover:text-white transition ease-in-out duration-300">
                         ' . $row['nombre'] . '
                     </button>';
                     }
@@ -142,7 +142,7 @@
                         //el nombre de las imagenes vienen con un espacio emtonces con el split se quita y se resuelve el problema  
                         let ganador = data[i].ganador;
                         ganador = ganador.split(' ');
-                        $('#resultados').append(`<div class="relative max-w-md mx-auto md:max-w-2xl mt-6 min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl mt-16">
+                        $('#resultados').append(`<div  data-aos="fade-up" class="relative max-w-md mx-auto md:max-w-2xl mt-6 min-w-0 break-words bg-white dark:bg-slate-900 w-full mb-6 shadow-lg rounded-xl mt-16">
                     <div class="px-6">
                         <div class="flex flex-wrap justify-center">
                             <div class="w-full flex justify-center">
@@ -155,8 +155,8 @@
                             </div>
                         </div>
                         <div class="text-center mt-2">
-                            <h3 class="text-2xl text-slate-700 font-bold leading-normal mb-1">${data[i].ganador} ${data[i].descripcion}</h3>
-                            <div class="text-xs mt-0 mb-2 text-slate-400 font-bold uppercase">
+                            <h3 class="text-2xl text-slate-700 font-bold dark:text-slate-400 leading-normal mb-1">${data[i].ganador} ${data[i].descripcion}</h3>
+                            <div class="text-xs mt-0 mb-2 text-slate-400 dark:text-slate-500 font-bold uppercase">
                                 ${data[i].sorteo}
                             </div>
                         </div>
@@ -179,6 +179,7 @@
         </div>
     </section>
 
+    <!----
     <footer class="p-4 mt-3 bg-slate-800 rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-900">
         <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
@@ -247,8 +248,21 @@
         <span class="block text-sm text-gray-400 sm:text-center dark:text-gray-400">© 2022 <a href="#" class="hover:underline">Lotomania</a>. Todos los Derechos Reservados. Solo para mayores de 18 años
         </span>
     </footer>
-
+--->
 
 </body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script>
+    $("#sorteos > button").click(function() {
+      
+        $("#sorteos > button").removeClass("dark:border-white dark:text-white bg-slate-800");
+        $("#sorteos > button").addClass(" dark:text-slate-500 text-black");
+        $(this).removeClass("dark:text-slate-500 text-black");
+        $(this).addClass("dark:border-white dark:text-white  bg-slate-800 text-white ");
+    });
+</script>
 
 </html>
